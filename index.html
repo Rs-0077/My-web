@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Legend of Zelda: Breath of the Wild</title>
+    <link rel="icon" type="image/png"  href="/api/placeholder/400/TLOZ.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header con parallax -->
+    <header>
+        <video autoplay loop muted playsinline class="hero-video">
+            <source src="/api/placeholder/BOTW ‐ Hecho con Clipchamp.mp4" type="video/mp4">
+            Tu navegador no soporta videos en HTML5.
+        </video>
+        <div class="parallax-bg"></div>
+        <div class="header-content">
+            <h1 class="game-title">The Legend of Zelda: Breath of the Wild</h1>
+            <p class="game-tagline">Embárcate en una aventura épica en el reino de Hyrule</p>
+            <a href="https://www.zelda.com/breath-of-the-wild/" class="cta-button">Descubrir el juego</a>
+        </div>
+    </header>
+    <audio id="musicaFondo" autoplay loop>
+        <source src="/api/placeholder/400/1-02. Main Theme.mp3" type="audio/mpeg">
+        Tu navegador no soporta la reproducción de audio.
+    </audio>
+
+    <button id="toggleMusic">⏸ Pausar música</button>
+
+    <script>
+        let musica = document.getElementById("musicaFondo");
+        let boton = document.getElementById("toggleMusic");
+
+        // Ajustar volumen inicial
+        musica.volume = 0.1;
+
+        // Alternar entre pausa y reproducción
+        boton.addEventListener("click", function() {
+            if (musica.paused) {
+                musica.play();
+                boton.textContent = "⏸ Pausar música";
+            } else {
+                musica.pause();
+                boton.textContent = "▶ Reproducir música";
+            }
+        });
+    </script>
+    
+    
+    <!-- Barra de navegación -->
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">BOTW</a>
+            <button class="mobile-menu-btn">☰</button>
+            <ul class="nav-links">
+                <li><a href="#overview">Resumen</a></li>
+                <li><a href="#features">Características</a></li>
+                <li><a href="#screenshots">Galería</a></li>
+                <li><a href="https://www.nintendo.com/store/products/the-legend-of-zelda-breath-of-the-wild-switch/" target="_blank">Comprar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sección de resumen del juego -->
+    <section id="overview">
+        <div class="container">
+            <h2 class="section-title">Una aventura sin precedentes</h2>
+            <div class="game-overview">
+                <div class="game-image-container">
+                    <img src="/api/placeholder/Link observando el vasto mundo de Hyrule.jpeg" alt="The Legend of Zelda: Breath of the Wild  " class="game-image">
+                </div>
+                <div class="game-info">
+                    <div class="game-description">
+                        <p>The Legend of Zelda: Breath of the Wild redefine la serie legendaria y rompe los límites de los juegos de aventura de mundo abierto. Viaja por campos extensos, bosques densos y cumbres montañosas mientras descubres lo que ha sucedido con el reino de Hyrule en esta emocionante aventura.</p>
+                        <p>Despierta de un sueño centenario para descubrir un mundo transformado por el Cataclismo y ayuda a la Princesa Zelda a enfrentar a la oscuridad que amenaza el reino. Con una libertad sin precedentes, elige tu propio camino en esta vasta tierra mágica.</p>
+                    </div>
+                    
+                    <table class="info-table">
+                        <tr>
+                            <th>Desarrollador</th>
+                            <td>Nintendo EPD</td>
+                        </tr>
+                        <tr>
+                            <th>Fecha de lanzamiento</th>
+                            <td>3 de marzo de 2017</td>
+                        </tr>
+                        <tr>
+                            <th>Plataformas</th>
+                            <td>Nintendo Switch, Wii U</td>
+                        </tr>
+                        <tr>
+                            <th>Género</th>
+                            <td>Acción-Aventura, Mundo Abierto</td>
+                        </tr>
+                        <tr>
+                            <th>Clasificación</th>
+                            <td>PEGI 12 / ESRB E10+</td>
+                        </tr>
+                    </table>
+                    
+                    <div class="buttons-group">
+                        <a href="https://www.nintendo.com/store/products/the-legend-of-zelda-breath-of-the-wild-switch/" class="cta-button" target="_blank">Comprar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de características -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Características principales</h2>
+            <div class="features-container">
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">🗺️</div>
+                    <h3 class="feature-title">Mundo abierto sin límites</h3>
+                    <p>Explora el vasto reino de Hyrule con total libertad. Escala montañas, atraviesa ríos y descubre secretos ocultos.</p>
+                </div>
+                
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">⚔️</div>
+                    <h3 class="feature-title">Sistema de combate innovador</h3>
+                    <p>Utiliza diferentes armas, arcos y habilidades para derrotar a tus enemigos utilizando estrategias creativas.</p>
+                </div>
+                
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">🧩</div>
+                    <h3 class="feature-title">Santuarios y puzles</h3>
+                    <p>Más de 120 santuarios con desafíos únicos que pondrán a prueba tu ingenio y habilidad.</p>
+                </div>
+                
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">🌡️</div>
+                    <h3 class="feature-title">Sistema dinámico de clima</h3>
+                    <p>Adaptate a un mundo vivo con ciclos de día y noche, clima cambiante y entornos interactivos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de capturas de pantalla -->
+    <section id="screenshots">
+        <div class="container">
+            <h2 class="section-title">Galería de imágenes</h2>
+            <div class="screenshots-grid">
+                <div class="screenshot">
+                    <img src="/api/placeholder/castillo de Hyrule .jpg" alt="Paisaje de Hyrule">
+                </div>
+                <div class="screenshot">
+                    <img src="/api/placeholder/Link escalando una montaña al amanecer.jpg" alt="Link escalando una montaña">
+                </div>
+                <div class="screenshot">
+                    <img src="/api/placeholder/Combate contra un Guardián.jpg" alt="Combate contra enemigos">
+                </div>
+                <div class="screenshot">
+                    <img src="/api/placeholder/Interior de un Santuario con puzle.jpeg" alt="Exploración de un santuario">
+                </div>
+                <div class="screenshot">
+                    <img src="/api/placeholder/Castillo de Hyrule bajo la influencia de Ganon.jpg" alt="Aldea en Hyrule">
+                </div>
+                <div class="screenshot">
+                    <img src="/api/placeholder/Link cabalgando por las praderas de Hyrule.jpeg" alt="Link cocinando">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>The Legend of Zelda</h3>
+                    <p>Una de las franquicias más icónicas del mundo de los videojuegos, creada por Shigeru Miyamoto y Takashi Tezuka.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/LegendofZelda" class="social-link" target="_blank">FB</a>
+                        <a href="https://twitter.com/ZeldaOfficialJP" class="social-link" target="_blank">TW</a>
+                        <a href="https://www.instagram.com/nintendo/" class="social-link" target="_blank">IG</a>
+                        <a href="https://www.youtube.com/Nintendo" class="social-link" target="_blank">YT</a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Enlaces rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#overview">Resumen del juego</a></li>
+                        <li><a href="#features">Características</a></li>
+                        <li><a href="#screenshots">Galería</a></li>
+                        <li><a href="https://www.zelda.com/breath-of-the-wild/assets/" target="_blank">Materiales de prensa</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Más títulos de Zelda</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.zelda.com/tears-of-the-kingdom/" target="_blank">Tears of the Kingdom</a></li>
+                        <li><a href="https://www.zelda.com/links-awakening/" target="_blank">Link's Awakening</a></li>
+                        <li><a href="https://www.zelda.com/hyrule-warriors-age-of-calamity/" target="_blank">Age of Calamity</a></li>
+                        <li><a href="https://www.zelda.com/skyward-sword-hd/" target="_blank">Skyward Sword HD</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contacto</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.nintendo.com/contact/" target="_blank">Soporte técnico</a></li>
+                        <li><a href="https://my.nintendo.com/" target="_blank">Mi Nintendo</a></li>
+                        <li><a href="https://www.nintendo.com/store/" target="_blank">Tienda oficial</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2025 Nintendo. The Legend of Zelda, Breath of the Wild y todos los personajes relacionados son marcas registradas de Nintendo Co., Ltd.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para la funcionalidad del menú móvil -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Menú móvil
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Cerrar menú al hacer clic en un enlace
+            const links = document.querySelectorAll('.nav-links a');
+            links.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.classList.remove('active');
+                });
+            });
+            
+            // Animación para elementos al hacer scroll
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.animate-fade-in');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = 1;
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Inicializar elementos con opacidad 0
+            const fadeElements = document.querySelectorAll('.animate-fade-in');
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
+            });
+            
+            // Llamar a la función al cargar y al hacer scroll
+            window.addEventListener('load', animateOnScroll);
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>
