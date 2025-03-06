@@ -2,7 +2,7 @@
         :root {
             --primary-color: #4caf88;
             --secondary-color: #3b8070;
-            --accent-color: #ffd000;
+            --accent-color: #44b12e;
             --dark-color: #1a1a1a;
             --light-color: #f8f8f8;
             --transition: all 0.5s ease;
@@ -40,6 +40,7 @@
             justify-content: center;
             overflow: hidden;
             text-align: center;
+            
         }
 
         .parallax-bg {
@@ -93,7 +94,7 @@
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-            background-color: #ffe033;
+            background-color: #8df763;
         }
 
         /* Barra de navegación */
@@ -336,10 +337,17 @@
             margin-bottom: 30px;
         }
 
-        .footer-column h3 {
+        .footer-column img {
+            font-size: 1.2rem;
+            
+            
+             
+        }
+        .footer-column h1 {
             font-size: 1.2rem;
             margin-bottom: 20px;
-            color: var(--accent-color);
+            color:  yellow;
+             
         }
 
         .footer-links {
@@ -365,6 +373,11 @@
             display: flex;
             gap: 15px;
             margin-top: 15px;
+        }
+
+        .social-icons a img {
+            width: 95%;
+            height: 95%;
         }
 
         .social-link {
@@ -481,5 +494,48 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                z-index: -1;
+                z-index: 0;
+        }
+        ::-webkit-scrollbar {
+            width: 11px;
+            position: relative;
+
+        }
+
+        ::-webkit-scrollbar-track{
+            background: #000000dc
+        }
+        
+        ::-webkit-scrollbar-thumb{
+            background: #44b12e;
+            border-radius: 18px;
+            border: 1px  solid #535353;
+            size: 30px;
+        }
+
+                /* Estilos del botón en la esquina inferior derecha */
+        #toggleMusic {
+            position: absolute;
+            bottom: 15px;
+            right: 15px;
+            background: rgba(72, 146, 2, 0.6);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            font-size: 16px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            z-index: 3;
+        }
+
+        #toggleMusic:hover {
+            background: rgba(71, 250, 0, 0.11);
+            color: rgb(247, 241, 241);
+            transform: scale(1.1);
+        }
+
+        #toggleMusic:active {
+            transform: scale(0.9);
         }

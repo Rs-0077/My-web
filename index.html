@@ -20,34 +20,35 @@
             <p class="game-tagline">Embárcate en una aventura épica en el reino de Hyrule</p>
             <a href="https://www.zelda.com/breath-of-the-wild/" class="cta-button">Descubrir el juego</a>
         </div>
+        <audio id="musicaFondo" autoplay loop>
+            <source src="/api/placeholder/400/1-02. Main Theme.mp3" type="audio/mpeg">
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    
+        <button id="toggleMusic">⏸ Pausar música</button>
+    
+        <script>
+            let musica = document.getElementById("musicaFondo");
+            let boton = document.getElementById("toggleMusic");
+    
+            // Ajustar volumen inicial
+            musica.volume = 0.1;
+    
+            // Alternar entre pausa y reproducción
+            boton.addEventListener("click", function() {
+                if (musica.paused) {
+                    musica.play();
+                    boton.textContent = "⏸ Pausar música";
+                } else {
+                    musica.pause();
+                    boton.textContent = "▶ Reproducir música";
+                }
+            });
+        </script>
+        
+        
     </header>
-    <audio id="musicaFondo" autoplay loop>
-        <source src="/api/placeholder/400/1-02. Main Theme.mp3" type="audio/mpeg">
-        Tu navegador no soporta la reproducción de audio.
-    </audio>
-
-    <button id="toggleMusic">⏸ Pausar música</button>
-
-    <script>
-        let musica = document.getElementById("musicaFondo");
-        let boton = document.getElementById("toggleMusic");
-
-        // Ajustar volumen inicial
-        musica.volume = 0.1;
-
-        // Alternar entre pausa y reproducción
-        boton.addEventListener("click", function() {
-            if (musica.paused) {
-                musica.play();
-                boton.textContent = "⏸ Pausar música";
-            } else {
-                musica.pause();
-                boton.textContent = "▶ Reproducir música";
-            }
-        });
-    </script>
-    
-    
+   
     <!-- Barra de navegación -->
     <nav>
         <div class="container nav-container">
@@ -145,13 +146,13 @@
             <h2 class="section-title">Galería de imágenes</h2>
             <div class="screenshots-grid">
                 <div class="screenshot">
-                    <img src="/api/placeholder/castillo de Hyrule .jpg" alt="Paisaje de Hyrule">
+                    <img src="/api/placeholder/Paisaje de Hyrule.jpg" alt="Paisaje de Hyrule">
                 </div>
                 <div class="screenshot">
-                    <img src="/api/placeholder/Link escalando una montaña al amanecer.jpg" alt="Link escalando una montaña">
+                    <img src="/api/placeholder/link admirando el atardecer.jpg" alt="Link escalando una montaña">
                 </div>
                 <div class="screenshot">
-                    <img src="/api/placeholder/Combate contra un Guardián.jpg" alt="Combate contra enemigos">
+                    <img src="/api/placeholder/Lucha contra un guardian.webp" alt="Combate contra enemigos">
                 </div>
                 <div class="screenshot">
                     <img src="/api/placeholder/Interior de un Santuario con puzle.jpeg" alt="Exploración de un santuario">
@@ -174,10 +175,18 @@
                     <h3>The Legend of Zelda</h3>
                     <p>Una de las franquicias más icónicas del mundo de los videojuegos, creada por Shigeru Miyamoto y Takashi Tezuka.</p>
                     <div class="social-icons">
-                        <a href="https://www.facebook.com/LegendofZelda" class="social-link" target="_blank">FB</a>
-                        <a href="https://twitter.com/ZeldaOfficialJP" class="social-link" target="_blank">TW</a>
-                        <a href="https://www.instagram.com/nintendo/" class="social-link" target="_blank">IG</a>
-                        <a href="https://www.youtube.com/Nintendo" class="social-link" target="_blank">YT</a>
+                        <a href="https://www.facebook.com/LegendofZelda" class="social-link" target="_blank"> 
+                            <img src="/api/placeholder/logo de facebook.png" alt="Logo facebook" >
+                        </a>
+                        <a href="https://twitter.com/ZeldaOfficialJP" class="social-link" target="_blank"">
+                            <img src="/api/placeholder/logo de x.webp" alt="Logo twiter"  >
+                        </a>
+                        <a href="https://www.instagram.com/nintendo/" class="social-link" target="_blank">
+                            <img src="/api/placeholder/logo de instagram.png" alt="Logo instagram" >
+                        </a>
+                        <a href="https://www.youtube.com/Nintendo" class="social-link" target="_blank">
+                            <img src="/api/placeholder/Logo youtube.jpg.png" alt="Logo youtube"  >
+                        </a>
                     </div>
                 </div>
                 
